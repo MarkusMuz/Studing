@@ -12,6 +12,11 @@
         <title>TA Start</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>TA Labs 2021</h1>
+        <p>Mark Muzyka IP-12</p>
+        <form action="lab1.jsp">
+            <input type="submit" value="Lab №1">
+        </form>
+        <p><a href="lab1.jsp">Alternative</a></p>
     </body>
 </html>
