@@ -12,6 +12,24 @@ package knu.fit.ist.ta.lab2;
 public class Calculate {
     public static float lab2equation(float x){
     
-    return (float) Math.log(x);
+    int a,b,c,d;
+    a=0;
+    b=8;
+    c=-5;
+    d=1;
+    
+    float res;
+    res=(float) Math.sqrt(d*x);
+    
+    if (x!=0.625f)
+    {
+        res =(float) res / (a*a*x+b*x+c); 
+    }
+    else
+    {
+        res= Integer.MAX_VALUE;
+    }
+    
+    return (float) res;
     }
 }
