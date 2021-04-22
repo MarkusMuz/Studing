@@ -59,6 +59,7 @@ public class Calculate {
         int count=0;
         for (int i=1;i<=min;i=i+1)
         {
+            count=0;
             for (int j=0;j<k;j=j+1)
             {
                 if (array[j]%i==0)
