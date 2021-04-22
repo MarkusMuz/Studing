@@ -10,8 +10,16 @@ class TaApplicationTests {
 
 	@Test
 	void contextLoads() {
+            assertEquals(0.33f,Calculate.lab2equation(1),0.01f);
+            assertEquals(0.09f,Calculate.lab2equation(3),0.01f);
+	}
+        
+        @Test
+	void contextLoads2() {
             int[] x={41,56,73,95};
             assertEquals("1",Calculate.lab3nsd(x));
+            int[] y={15,30,45,95,15};
+            assertEquals("5",Calculate.lab3nsd(y));
 	}
 
 }
