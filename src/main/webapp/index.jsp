@@ -12,6 +12,7 @@
         <title>TA Start</title>
     </head>
     <body>
+        <h3>Muzyka Mark IP-12</h3>
         <h1>TA 2021 Labs</h1>
         <p>Choose the lab</p>
 
@@ -20,8 +21,7 @@
 
                 <input type="submit" value="Lab1">
             </form> 
-        </div>
-        
+        </div>       
         <div>
             <form action="lab2form.jsp">  
                 <input type="submit" value="Lab2">
