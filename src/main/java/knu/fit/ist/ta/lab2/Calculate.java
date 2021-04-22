@@ -77,10 +77,10 @@ public class Calculate {
     public static String lab3answer(int[] array){
         
         int k=array.length;
-        String str="";
-        for (int i=0;i<k;i=i+1)
+        String str=""+array[0];
+        for (int i=1;i<k;i=i+1)
         {
-           str=str+array[i];
+           str=str+" "+array[i];
         }
         return str;
     }
