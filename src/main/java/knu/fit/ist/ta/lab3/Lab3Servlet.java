@@ -60,7 +60,7 @@ public class Lab3Servlet extends HttpServlet {
         String ans=Calculate.lab3nsd(x);
         String result = Calculate.lab3answer(x);
         request.setAttribute("result", result);
-        request.setAttribute("result", ans);
+        request.setAttribute("ans", ans);
         //request.setAttribute("results", aresult);
         request.getRequestDispatcher("lab3.jsp").forward(request, response);
     }
