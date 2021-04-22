@@ -16,6 +16,7 @@
         
         <%--<p><%=request.getAttribute("results")%></p>--%>
         <p><%=request.getAttribute("result")%></p>
+        <p><%=request.getAttribute("ans")%></p>
         
         <div>
             <form action="lab3form.jsp">  
