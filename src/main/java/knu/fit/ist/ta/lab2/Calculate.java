@@ -32,50 +32,23 @@ public class Calculate {
     
     return (float) res;
     }
-    public static int lab3equation(int k){
+    
+    public static int[] lab3array(int k){
         
         int[] array = new int[k];
-        int min=10000;
-        int mini=0;
         for (int i=0;i<k;i=i+1)
         {
-           array[i]=(int) (Math.random() * 10);
-           if (array[i]<min)
-           {
-               min=array[i];
-               mini=i;
-           }
+           array[i]=(int) (Math.random() * 100);
         }
-        int maxnsd=1;
-        int count=0;
-        for (int i=1;i<=min;i=i+1)
-        {
-            for (int j=0;j<k;j=j+1)
-            {
-                if (array[j]%i==0)
-                {
-                    count+=1;
-                }
-            }
-            if (count==k)
-            {
-                maxnsd=i;
-            }
-        }
-        for (int i=0;i<k;i=i+1)
-        {
-            System.out.println(array[i]);
-        }
-        return maxnsd;
+        return array;
     }
-    public static String lab3equations(int k){
+    public static String lab3nsd(int[] array){
         
-        int[] array = new int[k];
+        int k=array.length;
         int min=10000;
         int mini=0;
         for (int i=0;i<k;i=i+1)
         {
-           array[i]=(int) Math.random()*10000;
            if (array[i]<min)
            {
                min=array[i];
@@ -98,12 +71,17 @@ public class Calculate {
                 maxnsd=i;
             }
         }
-        String strarray;
-        strarray = "";
+        return "" + maxnsd;
+    }
+    
+    public static String lab3answer(int[] array){
+        
+        int k=array.length;
+        String str="";
         for (int i=0;i<k;i=i+1)
         {
-            strarray=strarray+","+array[i];
+           str=str+array[i];
         }
-        return strarray;
+        return str;
     }
 }
