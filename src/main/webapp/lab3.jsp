@@ -15,8 +15,9 @@
         <h1>Lab 3</h1>
         
         <%--<p><%=request.getAttribute("results")%></p>--%>
-        <p><%=request.getAttribute("result")%></p>
-        <p><%=request.getAttribute("ans")%></p>
+        <h2>Варіант 7</h2>
+        <p>Рандомно згенерований масив: <%=request.getAttribute("result")%></p>
+        <p>НСД усіх елементів масива = <%=request.getAttribute("ans")%></p>
         
         <div>
             <form action="lab3form.jsp">  

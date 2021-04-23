@@ -13,8 +13,9 @@
     </head>
     <body>
         <h1>Lab 2</h1>
-        
-        <p><%=request.getAttribute("result")%></p>
+        <h2>Варіант 12</h2>
+        <h3>a=0 b=8 c= -5 d=1</h3>
+        <p>Результат виконання: <%=request.getAttribute("result")%></p>
         
         <div>
             <form action="lab2form.jsp">  
