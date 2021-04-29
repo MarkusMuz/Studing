@@ -25,23 +25,11 @@
             It supports Monotype lightweight hints and performs its own auto-hinting. There’s support for TrueType fonts as well, but the best-quality fonts will be the Monotype Spark fonts. The base system includes a number of them. Monotype has already delivered the platforms on four development boards with displays—the Keil STM 23 EXL, NXP XPRESSO LPC1769, Microchip PIC32 board, and Renesas SH7264. 
             Support for the iType Spark and WorldType Shaper Spark can easily translate onto other platforms and displays.</h4>
         
-
-        <h2>Визначити загальних кількість слів в тексті:</h2>
-        <h2><%=request.getAttribute("task2")%></h2>
-        
-        <h2>Визначити кількість унікальних слів в тексті:</h2>
-        <h2><%=request.getAttribute("task3")%></h2>
-        
-        <h2>Визначити перші 3 слів, що зустрічаються найчастіше:</h2>
-        <h2><%=request.getAttribute("task4")%></h2>
-        
-        <h2>Визначити кількість слів що не містять літеру p:</h2>
-        <h2><%=request.getAttribute("task5")%></h2>
-        
-        <h2>Визначити кількість слів, що мають рівно 2 однакових літер:</h2>
-        <h2><%=request.getAttribute("task6")%></h2>       
-        
-        <h2>Визначити перші 3 трьохлітерні послідовності у словах тексту, що зустрічаються найчастіше:</h2>
-        <h2><%=request.getAttribute("task7")%></h2>
+        <h2>Визначити загальних кількість слів в тексті: <%=request.getAttribute("task2")%></h2>        
+        <h2>Визначити кількість унікальних слів в тексті: <%=request.getAttribute("task3")%></h2>        
+        <h2>Визначити перші 3 слів, що зустрічаються найчастіше: <%=request.getAttribute("task4")%></h2>        
+        <h2>Визначити кількість слів що не містять літеру p: <%=request.getAttribute("task5")%></h2>        
+        <h2>Визначити кількість слів, що мають рівно 2 однакових літер: <%=request.getAttribute("task6")%></h2>        
+        <h2>Визначити перші 3 трьохлітерні послідовності у словах тексту, що зустрічаються найчастіше: <%=request.getAttribute("task7")%></h2>
     </body>
 </html>
