@@ -23,17 +23,17 @@
             It supports Monotype lightweight hints and performs its own auto-hinting. There’s support for TrueType fonts as well, but the best-quality fonts will be the Monotype Spark fonts. The base system includes a number of them. Monotype has already delivered the platforms on four development boards with displays—the Keil STM 23 EXL, NXP XPRESSO LPC1769, Microchip PIC32 board, and Renesas SH7264. 
             Support for the iType Spark and WorldType Shaper Spark can easily translate onto other platforms and displays.</h4>
               
-        <h2>Далі введіть в поля цифри та букву відповідно до варіанту</h2>
+        <h2>Далі введіть в поля цифри та літеру відповідно до варіанту</h2>
         <div>
             <form method="post" action="./lab4">
                 <h2>Визначити перші n слів, що зустрічаються найчастіше</h2>
-                <input type="text" name="task4" placeholder="number"/>
+                <input type="text" name="task4" placeholder="Цифра"/>
                 <h2>Визначити кількість слів що не містять певну літеру</h2>
-                <input type="text" name="task5" placeholder="letter"/>
+                <input type="text" name="task5" placeholder="Літера"/>
                 <h2>Визначити кількість слів, що мають рівно n однакових літер</h2>
-                <input type="text" name="task6" placeholder="number"/>
+                <input type="text" name="task6" placeholder="Цифра"/>
                 <h2>Визначити перші n трьохлітерні послідовності у словах тексту, що зустрічаються найчастіше</h2>
-                <input type="text" name="task7" placeholder="number"/>
+                <input type="text" name="task7" placeholder="Цифра"/>
                 <input type="submit" value="ok"/>
             </form>
         </div>
