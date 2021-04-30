@@ -56,12 +56,12 @@ public class Lab4Servlet extends HttpServlet {
             throws ServletException, IOException {
         Lab2Calc ta = new Lab2Calc();
         
-        String t2 = "" + ta.getList(ta.text).size();
+        String t2 = "" + ta.getArray(ta.text).size();
         String t3 = "" + ta.getSet(ta.text).size();
-        String t4 = "" + ta.Task4(ta.getList(ta.text), Integer.parseInt(request.getParameter("task4")), 1);
+        String t4 = "" + ta.Task4(ta.getArray(ta.text), Integer.parseInt(request.getParameter("task4")), 1);
         String t5 = "" + ta.Task5(ta.text, request.getParameter("task5"));
         String t6 = "" + ta.Task6(ta.text, Integer.parseInt(request.getParameter("task6")));
-        String t7 = "" + ta.Task7(ta.getList(ta.text), Integer.parseInt(request.getParameter("task7")));
+        String t7 = "" + ta.Task7(ta.getArray(ta.text), Integer.parseInt(request.getParameter("task7")));
 
         request.setAttribute("task2", t2);
         request.setAttribute("task3", t3);
