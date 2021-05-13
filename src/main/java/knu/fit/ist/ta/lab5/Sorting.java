@@ -77,6 +77,44 @@ private Random rnd = new Random(1);
         return result;
     }
 
+        public List<String> sortApproach22() {
+
+        String s;
+        int t; 
+
+        List<String> result = new ArrayList<>();
+        result.addAll(unsortedText);
+
+        int n = 0;
+        int k = result.size() - 1;
+        int arrsize = result.size() - 1;
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        int index1=0;
+        int index2=0;
+        
+        while (k != n) {
+            t = k - 1;
+                   
+            index1=alphabet.indexOf(result.get(t));
+            index2=alphabet.indexOf(result.get(t+1));
+            while (t < arrsize && index1 > index2) {
+                s = result.get(t);
+                result.set(t, result.get(t + 1));
+                result.set(t + 1, s);
+                t++;
+                index1=alphabet.indexOf(result.get(t));
+                if (t+1<=arrsize){
+                    index2=alphabet.indexOf(result.get(t+1));
+                }
+            }
+
+            k--;
+
+        }
+
+        return result;
+    }
+    
     public List<Integer> sortApproach2() {
 
         int s, t; 
@@ -134,7 +172,7 @@ private Random rnd = new Random(1);
 
         return result;
     }
-
+    
     public List<Integer> sortApproach3() {
 
         int p, q, r, t;
