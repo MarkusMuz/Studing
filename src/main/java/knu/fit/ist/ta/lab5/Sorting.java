@@ -91,7 +91,7 @@ private Random rnd = new Random(1);
         while (k != n) {
             t = k - 1;
 
-            while (t < arrsize && result.get(t) < result.get(t + 1)) {
+            while (t < arrsize && result.get(t) > result.get(t + 1)) {
                 s = result.get(t);
                 result.set(t, result.get(t + 1));
                 result.set(t + 1, s);

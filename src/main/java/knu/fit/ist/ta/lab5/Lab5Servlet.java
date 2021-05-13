@@ -64,6 +64,7 @@ public class Lab5Servlet extends HttpServlet {
         int t2 = Integer.parseInt(request.getParameter("task2"));
         request.setAttribute("task2", text.linearSearch(t2, list.getUnsortedList()));
         request.setAttribute("sortedList", list.sortApproach3());
+        request.setAttribute("sortedListv2", list.sortApproach2());
         String t3 = request.getParameter("task3");
         request.setAttribute("task3", text.linearSearch(t3, list.getUnsortedText()));
         //request.setAttribute("task1", t1);

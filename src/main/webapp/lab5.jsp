@@ -17,7 +17,8 @@
         
         <div>
             <p>Невідсортований масив Integer: <%=request.getAttribute("unsortedList")%></p>        
-            <p>Невідсортований масив String: <%=request.getAttribute("unsortedText")%></p>        
+            <p>Невідсортований масив String: <%=request.getAttribute("unsortedText")%></p>   
+            <p>Відсортований масив задопомогою sortApproach2: <%=request.getAttribute("sortedListv2")%></p>  
             <p>Відсортований масив задопомогою sortApproach3: <%=request.getAttribute("sortedList")%></p>        
             <p>Визначити місце знаходження числа: <%=request.getAttribute("task2")%></p> 
             <p>Визначити місце знаходження літери: <%=request.getAttribute("task3")%></p>        
