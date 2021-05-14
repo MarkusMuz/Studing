@@ -5,6 +5,7 @@
  */
 package knu.fit.ist.ta.lab5;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,26 +13,45 @@ import java.util.List;
  * @author Mark
  */
 public class Searching {
-    public int linearSearch(String find, List<String> list) {
+    public List<Integer> linearSearch(String find, List<String> list) {
         int result = -1;
-
+        int flag=0;
+        List<Integer> indexes = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).equals(find)) {
-                return i;
+                indexes.add(i);
+                flag=1;
             }
         }
-        return result;
+        if (flag==0)
+        {
+           indexes.add(-1);
+           return indexes; 
+        }
+        else
+        {
+          return indexes;  
+        }
     }
     
-    public int linearSearch(Integer find, List<Integer> list) {
+    public List<Integer> linearSearch(Integer find, List<Integer> list) {
         int result = -1;
-
+        int flag=0;
+        List<Integer> indexes = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) == find) {
-                return i;
+                indexes.add(i);
+                flag=1;
             }
         }
-        return result;
+        if (flag==0){
+           indexes.add(-1);
+           return indexes; 
+        }
+        else
+        {
+          return indexes;  
+        }
     }
     
      public int linearSearch(int find, int start, List<Integer> list) {

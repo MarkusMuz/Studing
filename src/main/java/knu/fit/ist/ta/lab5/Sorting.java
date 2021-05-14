@@ -14,7 +14,7 @@ import java.util.Random;
  * @author Mark
  */
 public class Sorting {
-private Random rnd = new Random(1);
+    private Random rnd = new Random(1);
     private List<Integer> unsortedList;
     private List<String> unsortedText;
 
@@ -26,7 +26,7 @@ private Random rnd = new Random(1);
         return unsortedText;
     }
 
-    Sorting(int arrayLength) {
+    public Sorting(int arrayLength) {
 
         //List init
         this.unsortedList = new ArrayList<>();
