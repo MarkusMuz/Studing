@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Lab 5</h1>
         <form method="post" action="./lab5">
                 <p>Скільки елементів генерувати в масиві</p>
                 <input type="text" name="task1" placeholder="Скільки елементів"/>
