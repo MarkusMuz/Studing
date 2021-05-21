@@ -17,11 +17,11 @@ import java.util.Queue;
  */
 public class Tree {
 
-    Node root;
-    List<Integer> inOrder = new ArrayList<>();
-    List<Integer> PreOrder = new ArrayList<>();
-    List<Integer> PostOrder = new ArrayList<>();
-    List<Integer> LevelOrder = new ArrayList<>();
+    public Node root;
+    public List<Integer> inOrder = new ArrayList<>();
+    public List<Integer> PreOrder = new ArrayList<>();
+    public List<Integer> PostOrder = new ArrayList<>();
+    public List<Integer> LevelOrder = new ArrayList<>();
 
     private Node addRecursive(Node current, int value) {
         if (current == null) {

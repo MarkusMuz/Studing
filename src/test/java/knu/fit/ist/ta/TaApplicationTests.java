@@ -7,6 +7,7 @@ import knu.fit.ist.ta.lab4.Lab2Calc;
 import knu.fit.ist.ta.lab5.Searching;
 import knu.fit.ist.ta.lab5.Sorting;
 import knu.fit.ist.ta.lab6.Recursion;
+import knu.fit.ist.ta.lab6.Tree;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,7 +16,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class TaApplicationTests {
 
     @Test
-    void contextLoads() {
+    void contextLoads1() {
         assertEquals(0.33f, Calculate.lab2equation(1), 0.01f);
         assertEquals(0.09f, Calculate.lab2equation(3), 0.01f);
     }
@@ -70,5 +71,35 @@ class TaApplicationTests {
         ans2.add(320);
         temp = list2.geom(5, 4, 4);
         assertEquals(ans2, list2.getarrayToReturn());
+    }
+    
+    @Test
+    void contextLoads7() {
+        Tree tree = new Tree();
+        
+        tree.add(7);
+        tree.add(4);
+        tree.add(8);
+        tree.add(3);
+        tree.add(9);
+        tree.add(5);
+        tree.add(6);
+        tree.add(10);
+        
+        assertEquals(true, tree.containsNode(5));
+        assertEquals(false, tree.containsNode(27));
+        List<Integer> treeCorrect = new ArrayList<>();
+        treeCorrect.add(3);
+        treeCorrect.add(4);
+        treeCorrect.add(5);
+        treeCorrect.add(6);
+        treeCorrect.add(7);
+        treeCorrect.add(8);
+        treeCorrect.add(9);
+        treeCorrect.add(10);
+        tree.traverseInOrder(tree.root);
+        assertEquals(treeCorrect, tree.inOrder);
+        
+        
     }
 }
