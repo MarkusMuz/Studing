@@ -14,33 +14,34 @@ import java.util.Random;
  * @author Mark
  */
 public class Sorting {
+
     private Random rnd = new Random(1);
     private List<Integer> unsortedList;
     private List<String> unsortedText;
+    public long time1;
+    public long time2;
 
     public List<Integer> getUnsortedList() {
         return unsortedList;
     }
-    
+
     public List<String> getUnsortedText() {
         return unsortedText;
     }
 
     public Sorting(int arrayLength) {
-
-        //List init
         this.unsortedList = new ArrayList<>();
         for (int i = 0; i < arrayLength; i++) {
             unsortedList.add(rnd.nextInt(arrayLength));
         }
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        
+
         this.unsortedText = new ArrayList<>();
         int j;
         char letter;
         for (int i = 0; i < arrayLength; i++) {
-            j=rnd.nextInt(25);
-            letter=alphabet.charAt(j);
+            j = rnd.nextInt(25);
+            letter = alphabet.charAt(j);
             unsortedText.add(String.valueOf(letter));
         }
 
@@ -54,7 +55,7 @@ public class Sorting {
         result.addAll(unsortedList);
 
         int n = result.size() - 1;
-        int k = -1; 
+        int k = -1;
 
         while (k != n) {
             s = k + 1;
@@ -77,10 +78,10 @@ public class Sorting {
         return result;
     }
 
-        public List<String> sortApproach22() {
+    public List<String> sortApproach22() {
 
         String s;
-        int t; 
+        int t;
 
         List<String> result = new ArrayList<>();
         result.addAll(unsortedText);
@@ -89,22 +90,22 @@ public class Sorting {
         int k = result.size() - 1;
         int arrsize = result.size() - 1;
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        int index1=0;
-        int index2=0;
-        
+        int index1 = 0;
+        int index2 = 0;
+
         while (k != n) {
             t = k - 1;
-                   
-            index1=alphabet.indexOf(result.get(t));
-            index2=alphabet.indexOf(result.get(t+1));
+
+            index1 = alphabet.indexOf(result.get(t));
+            index2 = alphabet.indexOf(result.get(t + 1));
             while (t < arrsize && index1 > index2) {
                 s = result.get(t);
                 result.set(t, result.get(t + 1));
                 result.set(t + 1, s);
                 t++;
-                index1=alphabet.indexOf(result.get(t));
-                if (t+1<=arrsize){
-                    index2=alphabet.indexOf(result.get(t+1));
+                index1 = alphabet.indexOf(result.get(t));
+                if (t + 1 <= arrsize) {
+                    index2 = alphabet.indexOf(result.get(t + 1));
                 }
             }
 
@@ -114,16 +115,20 @@ public class Sorting {
 
         return result;
     }
-    
+
     public List<Integer> sortApproach2() {
 
-        int s, t; 
+        long startTime = System.currentTimeMillis();
+        int s, t;
 
         List<Integer> result = new ArrayList<>();
         result.addAll(unsortedList);
 
         int n = 0;
-        int k = result.size() - 1;
+        int k = 0;
+        if (result.size() != 0) {
+            k = result.size() - 1;
+        }
         int arrsize = result.size() - 1;
 
         while (k != n) {
@@ -140,6 +145,8 @@ public class Sorting {
 
         }
 
+        long endTime = System.currentTimeMillis();
+        time1 = endTime - startTime;
         return result;
     }
 
@@ -172,9 +179,10 @@ public class Sorting {
 
         return result;
     }
-    
+
     public List<Integer> sortApproach3() {
 
+        long startTime = System.currentTimeMillis();
         int p, q, r, t;
 
         List<Integer> result = new ArrayList<>();
@@ -187,7 +195,7 @@ public class Sorting {
         while (k < n) {
             List<Integer> tempList = new ArrayList<>();
             t = 0;
-            while (t < n+1) {
+            while (t < n + 1) {
                 p = t;
                 q = t + k;
                 if (q > n + 1) {
@@ -199,9 +207,7 @@ public class Sorting {
                 }
                 t = r;
 
-               
                 tempList.addAll(mergeLists(result.subList(p, q), result.subList(q, r)));
-                
 
             }
 
@@ -210,6 +216,8 @@ public class Sorting {
             k *= 2;
         }
 
+        long endTime = System.currentTimeMillis();
+        time2 = endTime - startTime;
         return result;
     }
 

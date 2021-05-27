@@ -9,6 +9,7 @@ import knu.fit.ist.ta.lab5.Sorting;
 import knu.fit.ist.ta.lab6.Recursion;
 import knu.fit.ist.ta.lab6.Tree;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -101,5 +102,25 @@ class TaApplicationTests {
         assertEquals(treeCorrect, tree.inOrder);
         
         
+    }
+    
+    @Test
+    void contextLoads8() {
+        List<Integer> ans = new ArrayList<>();
+        Sorting list = new Sorting(0);
+        assertEquals(ans, list.sortApproach2());
+        assertEquals(ans, list.sortApproach3());
+        Sorting list2 = new Sorting(1);
+        List<Integer> ans2 = new ArrayList<>();
+        ans2.add(0);
+        assertEquals(ans2,list2.sortApproach2());
+        assertEquals(ans2,list2.sortApproach3());
+        Sorting list3 = new Sorting(10000);
+        int ans3 = 1000;
+        int ans4 = 50;
+        list2.sortApproach2();
+        list2.sortApproach3();
+        assertTrue(list3.time1<ans3);
+        assertTrue(list3.time2<ans4);
     }
 }
