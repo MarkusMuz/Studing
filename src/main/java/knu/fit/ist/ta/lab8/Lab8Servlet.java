@@ -63,6 +63,9 @@ public class Lab8Servlet extends HttpServlet {
             request.setAttribute("elapsedTime_2", "N/A");
             request.setAttribute("sortedList_3", "N/A");
             request.setAttribute("elapsedTime_3", "N/A");
+            request.setAttribute("overall", "N/A");
+            request.setAttribute("overall2", "N/A");
+            request.setAttribute("n", t1);
         } else {
             Sorting list = new Sorting(t1);
             request.setAttribute("unsortedList", list.getUnsortedList());
@@ -70,6 +73,9 @@ public class Lab8Servlet extends HttpServlet {
             request.setAttribute("elapsedTime_2", list.time1);
             request.setAttribute("sortedList_3", list.sortApproach3());
             request.setAttribute("elapsedTime_3", list.time2);
+            request.setAttribute("overall", t1/(Math.log(t1)));
+            request.setAttribute("overall2", list.time1/list.time2);
+            request.setAttribute("n", t1);
         }
         request.getRequestDispatcher("lab8.jsp").forward(request, response);
     }

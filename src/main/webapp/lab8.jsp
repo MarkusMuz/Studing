@@ -22,7 +22,9 @@
             <p>Витрачено часу на сортування методом включення: <%=request.getAttribute("elapsedTime_2")%> мілісекунд</p>  
             <p>Відсортований масив задопомогою сортування злиттям: <%=request.getAttribute("sortedList_3")%></p>  
             <p>Складність алгоритму O( n * log( n ) )</p>
-            <p>Витрачено часу на сортування методом злиття: <%=request.getAttribute("elapsedTime_3")%> мілісекунд</p>  
+            <p>Витрачено часу на сортування методом злиття: <%=request.getAttribute("elapsedTime_3")%> мілісекунд</p> 
+            <p>Алгоритм сортування злиттям швилщий за сортуванння включенням при n = <%=request.getAttribute("n")%> в теорії: <%=request.getAttribute("overall")%> разів</p> 
+            <p>Алгоритм сортування злиттям швилщий за сортуванння включенням при n = <%=request.getAttribute("n")%> на практиці: <%=request.getAttribute("overall2")%> разів</p> 
             <form action="lab8form.jsp">  
                 <input type="submit" value="New value">
             </form> 
